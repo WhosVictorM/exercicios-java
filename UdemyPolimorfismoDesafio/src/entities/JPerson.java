@@ -1,0 +1,32 @@
+package entities;
+
+public class JPerson extends Data{
+	private int quantityEmployees;
+	
+	public JPerson() {
+		super();
+	}
+	
+	public JPerson(String name, Double annualIncoming, int quantityEmployees) {
+		super(name, annualIncoming);
+		this.quantityEmployees = quantityEmployees;
+	}
+	
+	public int getQuantityEmployees() {
+		return quantityEmployees;
+	}
+
+	public void setQuantityEmployees(int quantityEmployees) {
+		this.quantityEmployees = quantityEmployees;
+	}
+
+	@Override
+	public double tax() {
+		if(quantityEmployees < 10) {
+			return annualIncoming * 0.16;
+		} else {
+			return annualIncoming * 0.14;
+		}
+	}
+
+}

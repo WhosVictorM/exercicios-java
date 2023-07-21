@@ -1,0 +1,26 @@
+package application;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DateTimeFormat dtf = new DateTimeFormat("dd/MM/yyyy");
+		
+		System.out.println("Contract infos: ");
+		System.out.print("Number: ");
+		int number = sc.nextInt();
+		System.out.print("Date (DD/MM/YYYY): ");
+		LocalDate date = LocalDate.parse(sc.next());
+		System.out.print("Contract value: ");
+		double value = sc.nextDouble();
+		System.out.print("Installments: ");
+		int installments = sc.nextInt();
+		
+		
+		sc.close();
+	}
+
+}

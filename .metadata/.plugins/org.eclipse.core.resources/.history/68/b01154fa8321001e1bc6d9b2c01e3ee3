@@ -1,0 +1,45 @@
+package entities;
+
+public class Data {
+	private String name;
+	private Double annualIncoming;
+	private Double healthExpenses;
+	
+	public Data() {
+	}
+
+	public Data(String name, Double annualIncoming, Double healthExpenses) {
+		this.name = name;
+		this.annualIncoming = annualIncoming;
+		this.healthExpenses = healthExpenses;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getAnnualIncoming() {
+		return annualIncoming;
+	}
+
+	public void setAnnualIncoming(Double annualIncoming) {
+		this.annualIncoming = annualIncoming;
+	}
+
+	public Double getHealthExpenses() {
+		return healthExpenses;
+	}
+
+	public void setHealthExpenses(Double healthExpenses) {
+		this.healthExpenses = healthExpenses;
+	}
+	
+	public abstract double tax() {
+	
+	}
+	
+}

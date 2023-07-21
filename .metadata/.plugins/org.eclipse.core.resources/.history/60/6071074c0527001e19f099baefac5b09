@@ -1,0 +1,42 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Map<Candidates, Integer> map = new HashMap<>();
+		
+		System.out.println("Enter file full path: ");
+		String path = sc.nextLine();
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path))){
+			
+			String line = br.readLine();
+			String[] part = line.split(",");
+			
+			
+			
+			while (line != null) {
+				String name = part[0];
+				int votes = Integer.parseInt(part[1]);
+				
+				Candidates can = new Candidates(name, votes);
+				map.put(can, votes);
+			}
+			System.out.println(map.size());
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		
+		sc.close();
+	}
+
+}

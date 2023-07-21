@@ -1,0 +1,13 @@
+package application;
+
+import entities.Data;
+import entities.PPerson;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Data p = new PPerson("Victor", 15000.00, 1000.0);
+
+	}
+
+}

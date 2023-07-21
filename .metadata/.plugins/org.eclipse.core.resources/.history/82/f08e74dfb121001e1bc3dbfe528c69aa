@@ -1,0 +1,12 @@
+package application;
+
+import model.entities.Account;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Account acc = new Account(100, "Victor", 500.0, 100.0);
+
+	}
+
+}

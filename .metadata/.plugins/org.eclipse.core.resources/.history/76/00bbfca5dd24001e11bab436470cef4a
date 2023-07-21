@@ -1,0 +1,19 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Contract infos: ");
+		System.out.print("Number: ");
+		int number = sc.nextInt();
+		System.out.print("Date (DD/MM/YYYY): ");
+		
+		
+		sc.close();
+	}
+
+}

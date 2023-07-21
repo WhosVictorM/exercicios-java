@@ -1,0 +1,55 @@
+package application;
+
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import model.entities.Apartment;
+import model.entities.Floors;
+import model.exceptions.IllegalApartment;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Floors f = new Floors();
+		
+		String file = "arquivo.txt";
+		
+		List<Apartment> list = new ArrayList<>();
+
+		int floors = f.getFloors();
+		int apartments = 4;
+
+		for (int i = 1; i <= floors; i++) {
+			System.out.printf("FLOOR NUMBER %d\n\n", i);
+			try {
+				for (int j = 1; j <= f.witchFloor(i, apartments); j++) {
+					System.out.print("APTO Number: ");
+					int number = sc.nextInt();
+					System.out.print("Gas Quantity: ");
+					int gas = sc.nextInt();
+					Apartment p = new Apartment();
+					double cond = p.incomes(number, i, p.gasIncomeFile(number, gasFile(number));
+					p = new Apartment(number, gas, cond, floors);
+					list.add(p);
+					p.saveData(number, gas, p.gasIncomeFile(number, gas), cond);
+					System.out.println();
+				}
+			} catch (IllegalApartment e) {
+				System.out.println("Apartment input ERROR: ");
+				sc.next();
+			}
+		}
+		
+
+		sc.close();
+
+	}
+
+}

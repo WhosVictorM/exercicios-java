@@ -1,0 +1,24 @@
+package application;
+
+import entities.Data;
+import entities.JPerson;
+import entities.PPerson;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Data p = new PPerson("Victor", 15000.00, 1000.0);
+		System.out.println(p.tax());
+		
+		Data p2 = new PPerson("José", 50000.0, 2000.0);
+		System.out.println(p2.tax());
+		
+		Data j = new JPerson("Alex", 100000.0, 20);
+		System.out.println(j.tax());
+		
+		Data j2 = new JPerson("Maria", 50000.0, 5);
+		System.out.println(j.tax());
+
+	}
+
+}

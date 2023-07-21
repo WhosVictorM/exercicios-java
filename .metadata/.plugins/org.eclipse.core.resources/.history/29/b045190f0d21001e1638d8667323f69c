@@ -1,0 +1,24 @@
+package application;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import entities.ImportedProduct;
+import entities.Product;
+import entities.UsedProduct;
+
+public class Program {
+
+	public static void main(String[] args) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Product p = new Product("TV", 200.0);
+		System.out.println(p.priceTag());
+		
+		Product p2 = new UsedProduct("Tablet", 400.00, sdf.parse("15/03/2023"));
+		System.out.println(p2.priceTag());
+		
+		Product p3 = new ImportedProduct("Iphone", 1200.00, 20.00);
+		System.out.println(p3.priceTag());
+	}
+
+}

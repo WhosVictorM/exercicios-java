@@ -1,0 +1,44 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import entities.Apartment;
+import entities.Floors;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Floors f = new Floors();
+		
+		List<Apartment> list = new ArrayList<>();
+
+		int floors = f.getFloors();
+		int apartments = 2;
+
+		for (int i = 1; i <= floors; i++) {
+			System.out.printf("FLOOR NUMBER %d\n\n", i);
+			f.witchFloor(i, apartments);
+			for (int j = 1; j <= apartments; j++) {
+				System.out.print("APTO Number: ");
+				int number = sc.nextInt();
+				System.out.print("Gas Quantity: ");
+				int gas = sc.nextInt();
+				Apartment p = new Apartment();
+				double cond = p.incomes(number, i, p.gasIncome(gas));
+				p = new Apartment(number, gas, cond, floors);
+				list.add(p);
+			}
+		}
+		for(Apartment c : list) {
+			System.out.println(c.toString());
+		}
+
+		sc.close();
+
+	}
+
+}

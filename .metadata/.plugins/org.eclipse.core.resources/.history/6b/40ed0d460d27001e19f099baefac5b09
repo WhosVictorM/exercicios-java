@@ -1,0 +1,9 @@
+package application;
+
+import java.util.Comparator;
+
+import model.entities.Product;
+
+public class MyComparator implements Comparator<Product>{
+
+}

@@ -1,0 +1,32 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\temp\\Source.csv"))){
+			String line = br.readLine();
+			File file = new File("C:\\temp\\on\\summary.csv");
+			String[] parts = line.split(",");
+			
+			while (line != null) {
+				System.out.println(line);
+				line = br.readLine();
+			}
+			
+			
+			
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

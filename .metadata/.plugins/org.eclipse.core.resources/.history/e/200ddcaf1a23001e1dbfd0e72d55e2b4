@@ -1,0 +1,25 @@
+package entities;
+
+public class Floors {
+	private int floors = 14;
+
+	public Floors() {
+	}
+
+	public Floors(int floors) {
+		this.floors = floors;
+	}
+
+	public int getFloors() {
+		return floors;
+	}
+
+	public int witchFloor(int i, int apartments) {
+		if (i == 2) {
+			return apartments = 2;
+		}
+
+		return apartments;
+	}
+
+}

@@ -1,0 +1,29 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		try (BufferedReader bw = new BufferedReader(new FileReader("C:\\temp\\Source.csv"))){
+			Scanner sc = new Scanner(bw);
+			
+			if (sc != null) {
+				bw.read();
+			}
+			
+			
+			
+			
+			sc.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

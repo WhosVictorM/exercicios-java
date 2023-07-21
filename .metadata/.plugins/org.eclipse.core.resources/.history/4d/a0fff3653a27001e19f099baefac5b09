@@ -1,0 +1,18 @@
+package application;
+
+import java.io.IOException;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\temp\\employee.csv"))){
+			
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+
+	}
+
+}

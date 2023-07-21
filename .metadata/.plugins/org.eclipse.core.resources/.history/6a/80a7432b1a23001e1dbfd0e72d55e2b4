@@ -1,0 +1,7 @@
+package entities;
+
+public class Floors {
+	private int floors = 14;
+	
+	
+}

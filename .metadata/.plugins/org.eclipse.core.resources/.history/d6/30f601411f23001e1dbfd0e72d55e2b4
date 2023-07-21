@@ -1,0 +1,35 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Apartment;
+import entities.Floors;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Floors f = new Floors();
+
+		int floors = f.getFloors();
+		int apartments = 4;
+
+		for (int i = 1; i <= floors; i++) {
+			f.witchFloor(i, apartments);
+			for (int j = 1; j <= apartments; j++) {
+				System.out.printf("APTO Number: ");
+				int number = sc.nextInt();
+				System.out.println("Gas Quantity: ");
+				int gas = sc.nextInt();
+				Apartment p = new Apartment(number, gas);
+				p.incomes(number, i, p.gasIncome(gas));
+			}
+			System.out.printf("APTO: %d\nGas: %.2f\nCond: %.2f", number, p.gasIncome(gas), p.incomes(number, i, p.gasIncome(gas)););
+		}
+
+		sc.close();
+
+	}
+
+}

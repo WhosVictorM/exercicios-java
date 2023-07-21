@@ -1,0 +1,30 @@
+package application;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+import model.entities.CarRental;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Rental Details: \n");
+		System.out.print("Car Model: ");
+		String model = sc.nextLine();
+		System.out.print("Start date (DD/MM/YYYY HH:MM): ");
+		LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
+		System.out.print("Finish date (DD/MM/YYYY HH:MM): ");
+		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
+		
+		CarRental cr = new CarRental(start, finish, name);
+		
+		sc.close();
+	}
+
+}

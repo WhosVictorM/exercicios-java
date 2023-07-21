@@ -1,0 +1,99 @@
+package hotelSystem;
+
+import java.awt.*;
+import javax.swing.*;
+
+import com.formdev.flatlaf.FlatIntelliJLaf;
+
+import java.awt.event.*;
+
+public class LandingPageAdminV2 extends JFrame {
+
+	public static void main(String[] args) {
+		new LandingPageAdminV2().setVisible(true);
+	}
+
+	public LandingPageAdminV2() {
+		super("Main Admin Page Hotel");
+		FlatIntelliJLaf.setup();
+		UIManager.put( "Button.arc", 999 );
+		UIManager.put("TabbedPane.tabSeparatorsFullHeight", true);
+		ImageIcon icon = new ImageIcon("C:\\Users\\victo\\OneDrive\\Área de Trabalho\\Dev\\Tools\\NWH.png");
+		setIconImage(icon.getImage());
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setSize(900, 720);
+		setLayout(null);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		getContentPane().setBackground(Color.GRAY);
+		
+		JButton receptionButton = new JButton("Reception");
+		receptionButton.setBounds(70, 260, 200, 35);
+		receptionButton.setBackground(new Color(182, 101, 225));
+		receptionButton.setForeground(Color.WHITE);
+		receptionButton.setFont(new Font("Segoe UI", Font.BOLD, 13));
+		add(receptionButton);
+		
+		JButton adminButton = new JButton("Admin");
+		adminButton.setBounds(70, 330, 200, 35);
+		adminButton.setBackground(new Color(182, 101, 225));
+		adminButton.setForeground(Color.WHITE);
+		adminButton.setFont(new Font("Segoe UI", Font.BOLD, 13));
+		add(adminButton);
+		
+		JButton logOut = new JButton("LogOut");
+		logOut.setBounds(70, 400, 200, 35);
+		logOut.setBackground(new Color(182, 101, 225));
+		logOut.setForeground(Color.WHITE);
+		logOut.setFont(new Font("Segoe UI", Font.BOLD, 13));
+		add(logOut);
+
+		JTextArea report = new JTextArea("Report Suggestion/Bug?");
+		report.setEditable(false);
+		report.setBounds(85, 530, 160, 30);
+		report.setForeground(new Color(182, 101, 225));
+		report.setBackground(Color.WHITE);
+		report.setFont(new Font("Segoe UI", Font.BOLD, 13));
+		add(report);
+		
+		JTextArea submit = new JTextArea("Use this to report any\nerror or suggestions.");
+		submit.setEditable(false);
+		submit.setBounds(95, 560, 140, 40);
+		submit.setForeground(new Color(182, 101, 225));
+		submit.setBackground(Color.WHITE);
+		submit.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+		add(submit);
+		
+		JLabel lateralBarr = new JLabel();
+		lateralBarr.setIcon(new ImageIcon("C:\\Users\\victo\\OneDrive\\Área de Trabalho\\Dev\\Tools\\pane.png"));
+		lateralBarr.setBounds(20, -5, 300, 700);
+		add(lateralBarr);
+		
+		JLabel wallpaper = new JLabel();
+		wallpaper.setIcon(new ImageIcon("C:\\Users\\victo\\OneDrive\\Área de Trabalho\\Dev\\Tools\\HotelTestev2.JPG"));
+		wallpaper.setBounds(-10, -10, 900, 720);
+		getContentPane().add(wallpaper);
+
+//		itemEmployee.addActionListener(new ActionListener() {
+//
+//			public void actionPerformed(ActionEvent e) {
+//				try {
+//					new AddEmployeeDetails().setVisible(true);
+//				} catch (Exception e1) {
+//				}
+//			}
+//		});
+//
+//		itemRegister.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				try {
+//					new AddEmployee().setVisible(true);
+//				} catch (Exception e1) {
+//				}
+//			}
+//		});
+
+		
+	}
+
+}

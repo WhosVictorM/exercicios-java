@@ -1,0 +1,18 @@
+package application;
+
+import java.text.SimpleDateFormat;
+
+import entities.Product;
+import entities.UsedProduct;
+
+public class Program {
+
+	public static void main(String[] args) {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Product p = new Product("TV", 200.0);
+		System.out.println(p.priceTag());
+		
+		Product p2 = new UsedProduct("Tablet", 400.00, sdf.parse("15/03/2023"));
+	}
+
+}

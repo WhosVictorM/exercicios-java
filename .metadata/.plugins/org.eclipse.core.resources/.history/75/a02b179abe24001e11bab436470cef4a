@@ -1,0 +1,25 @@
+package application;
+
+import java.time.LocalDateTime;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		DateTimeFormater dtf = new DateTimeFormater("dd/MM/yyyy hh:mm");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Rental Details: ");
+		System.out.println("Car Model: ");
+		String model = sc.nextLine();
+		LocalDateTime start = dtf.parse(sc.nextLine());
+		
+		
+		
+		
+		sc.close();
+	}
+
+}

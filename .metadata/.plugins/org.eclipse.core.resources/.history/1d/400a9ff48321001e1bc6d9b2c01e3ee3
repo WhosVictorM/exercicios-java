@@ -1,0 +1,7 @@
+package entities;
+
+public class Data {
+	private String name;
+	private Double annualIncoming;
+	private Double healthExpenses;
+}

@@ -1,0 +1,12 @@
+package entities;
+
+public class PPerson extends Data{
+	
+	
+	
+	@Override
+	public double tax() {
+		return 0;
+	}
+
+}

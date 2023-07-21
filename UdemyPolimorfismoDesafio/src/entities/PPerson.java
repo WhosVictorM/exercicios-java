@@ -1,0 +1,40 @@
+package entities;
+
+public class PPerson extends Data{
+	private Double healthExpenses;
+	
+	public PPerson() {
+		super();
+	}
+	
+	public PPerson(String name, Double annualIncoming, Double healthExpenses) {
+		super(name, annualIncoming);
+		this.healthExpenses = healthExpenses;
+	}
+
+	public Double getHealthExpenses() {
+		return healthExpenses;
+	}
+
+	public void setHealthExpenses(Double healthExpenses) {
+		this.healthExpenses = healthExpenses;
+	}
+
+	@Override
+	public double tax() {
+		if(annualIncoming < 20000) {
+			if(healthExpenses < 0) {
+				return annualIncoming * 0.15;
+			} else {
+				return annualIncoming * 0.15 - healthExpenses * 0.5;
+			}
+		} else {
+			if(healthExpenses < 0) {
+				return annualIncoming * 0.25;
+			} else {
+				return annualIncoming * 0.25 - healthExpenses * 0.5;
+			}
+		}
+	}
+
+}
